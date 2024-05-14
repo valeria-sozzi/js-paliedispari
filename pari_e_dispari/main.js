@@ -16,8 +16,14 @@ const userNumber = parseInt(prompt('inserisci un numero da 1 a 5'))
 console.log(userNumber);
 
 //funzione per generare un numero random per il pc da 1 a 5 
+/**
+ * 
+ * @param {number} min numero minimo che puo generare
+ * @param {number} max numero massimo che puo generare
+ * @returns {number}
+ */
 function pcNumber(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 let pc_number = pcNumber (1,5)
@@ -29,7 +35,11 @@ somma = userNumber + pc_number
 console.log(somma);
 
 //stabilire se la somma è pari o dispari
-
+/**
+ * 
+ * @param {number} sommaNumber la somma dei numeri in considerazione
+ * @returns {boolean}
+ */
 function isEven(sommaNumber) {
     if (somma % 2 === 0 ){
         return true;
